@@ -1,0 +1,139 @@
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.conteiner {
+    max-width: 1110px;
+    margin: auto;
+}
+
+.header {
+    background: url("../Images/Header/background.png");
+    padding-top: 30px;
+    padding-bottom: 130px;
+    height: 591px;
+}
+
+.header-top {
+    display: flex;
+    margin-bottom: 6px;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+}
+
+.header-logo {}
+
+.header-logo__link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.header-nav {}
+
+.mark-list {
+    display: flex;
+    padding: 0%;
+    list-style: none;
+}
+
+.mark-list__item {
+    margin-right: 28px;
+}
+
+.mark-list__item:last-child {
+    margin-right: 0px;
+}
+
+.mark-list__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.header-phone {
+    text-align: right;
+}
+
+.header-phone__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 14px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.header-phone__info {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    color: #333333;
+}
+
+.header-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content {}
+
+.header-content__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    margin-bottom: 17px;
+    color: #333333;
+}
+
+.header-content__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 59px;
+    color: #333333;
+}
+
+.header-content__btn {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #FB9475;
+    padding: 17px 30px;
+    width: 203px;
+    height: 48px;
+    border-radius: 24px;
+}
+
+.header-body__img {}
+
+.header-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    margin-left: 63px;
+}
+
+.header-img__link {}
+
+.header-img__vk {}
+
+.header-img__insta {}
+
+.header-img__youtube {}

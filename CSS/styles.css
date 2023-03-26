@@ -1,5 +1,6 @@
 body {
     font-family: "Montserrat", sans-serif;
+    font-style: normal;
 }
 
 .conteiner {
@@ -27,7 +28,6 @@ body {
 .header-logo {}
 
 .header-logo__link {
-    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
@@ -52,7 +52,6 @@ body {
 }
 
 .mark-list__link {
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -69,7 +68,6 @@ body {
 }
 
 .header-phone__link {
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 14px;
@@ -78,7 +76,6 @@ body {
 }
 
 .header-phone__info {
-    font-style: normal;
     font-weight: 400;
     font-size: 11px;
     line-height: 14px;
@@ -94,7 +91,6 @@ body {
 .header-content {}
 
 .header-content__title {
-    font-style: normal;
     font-weight: 600;
     font-size: 48px;
     line-height: 59px;
@@ -103,7 +99,6 @@ body {
 }
 
 .header-content__text {
-    font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
@@ -112,17 +107,17 @@ body {
 }
 
 .header-content__btn {
-    font-style: normal;
+    display: flex;
     font-weight: 500;
     font-size: 14px;
     line-height: 14px;
-    text-align: center;
     color: #FFFFFF;
     background-color: #FB9475;
     padding: 17px 30px;
     width: 203px;
     height: 48px;
     border-radius: 24px;
+    text-decoration: none;
 }
 
 .header-body__img {}
@@ -158,7 +153,7 @@ body {
     right: 0;
 }
 
-.batton {
+.button {
     text-align: center;
     position: absolute;
     right: 127.57px;
@@ -167,14 +162,13 @@ body {
     height: 92.42px;
 }
 
-.batton__video-link {}
+.button__video-link {}
 
-.batton__img {
+.button__img {
     margin-bottom: 6.03px;
 }
 
-.batton__text {
-    font-style: normal;
+.button__text {
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
@@ -187,7 +181,6 @@ body {
 }
 
 .about-description__h1 {
-    font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 59px;
@@ -196,7 +189,6 @@ body {
 }
 
 .about-description__text1 {
-    font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 32px;
@@ -205,7 +197,6 @@ body {
 }
 
 .about-description__text2 {
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
@@ -219,6 +210,7 @@ body {
     align-items: center;
     padding: 0px;
     gap: 30px;
+    margin-bottom: 100px;
 }
 
 .cabinet {
@@ -235,7 +227,6 @@ body {
 }
 
 .cabinet__title {
-    font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
@@ -244,7 +235,6 @@ body {
 }
 
 .cabinet__description {
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
@@ -267,7 +257,6 @@ body {
 }
 
 .cosmetic__title {
-    font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
@@ -276,7 +265,6 @@ body {
 }
 
 .cosmetic__description {
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
@@ -299,7 +287,6 @@ body {
 }
 
 .masters__title {
-    font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
@@ -308,11 +295,58 @@ body {
 }
 
 .masters__description {
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
     color: #333333;
     text-align: center;
     width: 296px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 78px;
+}
+
+.footer-logo {}
+
+.footer-logo__logo {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.footer-logo__link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #278AFF;
+}
+
+.footer-nav {}
+
+.footer-mark-list {
+    display: flex;
+    padding: 0%;
+    list-style: none;
+}
+
+.footer-mark-list__item:not(:last-child) {
+    margin-right: 28px;
+}
+
+.footer-mark-list__link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #333333;
+    text-decoration: none;
+}
+
+.footer-mark-list__link:hover {
+    color: #00BF78;
 }

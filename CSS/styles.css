@@ -4,6 +4,7 @@ html {
 
 body {
     height: 100%;
+    min-width: 320px;
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     color: #333333;
@@ -39,14 +40,13 @@ main {
     display: flex;
     position: relative;
     z-index: 1;
-    height: 45px;
     margin-bottom: 118px;
     justify-content: space-between;
     align-items: baseline;
 }
 
 .header__logo {
-    margin-right: 15px;
+    display: inline-block;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
@@ -56,11 +56,11 @@ main {
 
 .navigation {
     max-width: 495px;
-    margin-right: 15px;
 }
 
 .navigation__markList {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 5px 28px;
     padding: 0%;
@@ -125,17 +125,25 @@ main {
 }
 
 .btn {
-    display: flex;
-    padding: 17px 30px;
-    width: 203px;
-    height: 48px;
+    display: inline-block;
+    padding: 10px 20px;
+    width: 112px;
+    height: 34px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 14px;
     color: #FFFFFF;
     background-color: #FB9475;
-    border-radius: 24px;
+    border-radius: 17px;
     text-decoration: none;
+}
+
+.header__btn {
+    width: 203px;
+    height: 48px;
+    padding: 17px 30px;
+    font-size: 14px;
+    border-radius: 24px;
 }
 
 .header__imgGirl {
@@ -163,11 +171,14 @@ main {
     background-color: #FB9475;
 }
 
-.socialNetwork {
-    display: flex;
+.header__social {
     position: absolute;
     bottom: 226px;
     right: 0;
+}
+
+.socialNetwork {
+    display: flex;
     gap: 16px;
 }
 
@@ -198,7 +209,11 @@ main {
 .section {
 }
 
-.section__header {
+.section__header p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 24px;
 }
 
 .section__title {
@@ -209,7 +224,7 @@ main {
 }
 
 .section__inner {
-
+    margin-bottom: 100px;
 }
 
 /*************section about************/
@@ -240,7 +255,6 @@ main {
     align-items: center;
     padding: 0px;
     gap: 30px;
-    margin-bottom: 100px;
 }
 
 .infoBlock {
@@ -311,6 +325,122 @@ main {
 }
 /*************END section about************/
 
+/*************section services************/
+.section__services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 30px;
+}
+
+.services {
+    max-width: 350px;
+}
+
+.services img {
+ margin-bottom: 20px;
+}
+
+.services h4 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 0 8px;
+   }
+
+.services p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0 0 16px;
+   }
+/*************END section services************/
+
+/*************section price************/
+.section__navigation {
+    max-width: 794px;
+    margin-bottom: 47px;
+}
+
+.section__hair-cutting {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 0;
+    justify-content: space-between;
+}
+
+.servicesPrice {
+    display: flex;
+    max-width: 444px;
+    justify-content: space-between;
+    flex: 50%;
+}
+
+.servicesPrice__services h5 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 0 8px;
+}
+
+.servicesPrice__services p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+}
+
+.servicesPrice__price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #00BF78;
+}
+/*************END section price************/
+
+/*************section masters************/
+.section__master {
+    padding: 80px 0;
+    background-color: #F8F6F7;
+    margin-bottom: 100px;
+}
+
+.section__master .section__inner{
+    margin: 0;
+}
+
+.section__aboutMasters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 30px;
+}
+
+.masters img{
+    margin-bottom: 20px;
+}
+
+.masters h5{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 0 8px;
+}
+
+.masters__specialization {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 0 20px;
+}
+
+.masters__experience {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+}
+/*************END section masters************/
+
+
 /*************footer************/
 .footer {
     position : absolute;
@@ -343,4 +473,107 @@ main {
     font-size: 12px;
     line-height: 15px;
     color: #278AFF;
+}
+/*************END footer************/
+/*адаптация */
+@media only screen and (max-width: 1280px){
+    .header__logo, .header__phone {
+        margin: 0 15px 0 15px;
+    }
+
+    .header__social {
+        right: 15px;
+    }
+
+    .header__inner {
+        margin-left: 15px;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .header__imgGirl img{
+        opacity: 0.5;
+    }
+
+    .header__imgGirl:before {
+        opacity: 0;
+    }
+
+    .header__phoneLink {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .header__top {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .header__navigation {
+        margin: 0 15px 0 15px;
+    }
+
+    .navigation__markList {
+        justify-content: center;
+    }
+    
+    .header__imgGirl {
+        opacity: 0;
+    }
+
+    .socialNetwork--vertical {
+        flex-direction: row;
+    }
+
+    .header__social {
+        right: 50%;
+        bottom: 10%;
+        transform: translate(50%, 10%);
+    }
+
+    .header__text {
+        margin-bottom: 60px;
+    }
+
+    .header__inner {
+        text-align: center;
+        max-width: 100%;
+        margin-right: 15px;
+    }
+
+    .header__btn {
+        margin-bottom: 80px;
+    }
+
+    .header .container {
+        padding-bottom: 30px;
+    }
+
+    .header__phone {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .header__top {
+        margin-bottom: 50px;
+    }
+
+    .header__title {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 29px;
+    }
+    
+    .header__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    
 }

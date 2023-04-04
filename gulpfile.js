@@ -7,7 +7,7 @@ const browserSync = require('browser-sync').create();
 function buildSass() {
     return src('src/scss/**/*.scss')
         .pipe(sass({ includePaths: ['./node_modules'] }).on('error', sass.logError))
-        .pipe(dest('src/css'))
+        .pipe(dest('src/CSS'))
         .pipe(dest('dist/css'))
         .pipe(browserSync.stream());
 }
@@ -21,7 +21,7 @@ function buildHtml() {
 
 // Таск копирования статичных файлов
 function copy() {
-    return src(['src/Images']).pipe(dest('dist'));
+    return src(['src/Images/**/*.*']).pipe(dest('dist'));
 }
 
 // Таск очистки dist

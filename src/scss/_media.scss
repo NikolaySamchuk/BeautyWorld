@@ -1,6 +1,8 @@
 /*адаптация */
-@media only screen and (max-width: 1280px){
-    .header__logo, .header__phone {
+@media only screen and (max-width: 1280px) {
+
+    .header__logo,
+    .header__phone {
         margin: 0 15px 0 15px;
     }
 
@@ -13,8 +15,8 @@
     }
 }
 
-@media only screen and (max-width: 992px){
-    .header__imgGirl img{
+@media only screen and (max-width: 992px) {
+    .header__imgGirl img {
         opacity: 0.5;
     }
 
@@ -25,9 +27,13 @@
     .header__phoneLink {
         font-size: 14px;
     }
+
+    .section__advantage {
+        justify-content: center;
+    }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
     .header__top {
         flex-direction: column;
         align-items: center;
@@ -38,10 +44,11 @@
         margin: 0 15px 0 15px;
     }
 
-    .navigation__markList {
+    .navigation__markList, .section__services,
+    .section__aboutMasters {
         justify-content: center;
     }
-    
+
     .header__imgGirl {
         opacity: 0;
     }
@@ -79,7 +86,7 @@
     }
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px) {
     .header__top {
         margin-bottom: 50px;
     }
@@ -89,14 +96,20 @@
         font-size: 26px;
         line-height: 29px;
     }
-    
+
     .header__text {
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
     }
+
+    .header__hamburger {
+        display: block;
+    }
+
+    .header__navigation {
+        display: none;
+    }
 }
 
-@media only screen and (max-width: 320px){
-    
-}
+@media only screen and (max-width: 320px) {}

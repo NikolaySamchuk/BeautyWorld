@@ -53,7 +53,6 @@
 
     &__markList {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
         gap: 5px 28px;
         padding: 0%;
@@ -80,7 +79,7 @@
 }
 
 .socialNetwork {
-    display: flex;
+    display: inline-flex;
     gap: 16px;
 
     &--vertical {
@@ -348,6 +347,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding: 0px;
     gap: 30px;
 }
@@ -384,14 +384,14 @@
     position: absolute;
     bottom: 0;
     right: 0;
-}
 
-.section__banner {
-    display: block;
-    position: relative;
-    max-width: 445px;
-    height: auto;
-    border-radius: 8px;
+    img {
+        display: block;
+        position: relative;
+        max-width: 445px;
+        height: auto;
+        border-radius: 8px;
+    }
 }
 
 .section__btn {
@@ -454,7 +454,7 @@
 /*************END section services************/
 
 /*************section price************/
-.section__navigation {
+.section__navigationPrice {
     max-width: 794px;
     margin-bottom: 47px;
 }
@@ -462,7 +462,7 @@
 .section__hair-cutting {
     display: flex;
     flex-wrap: wrap;
-    gap: 32px 0;
+    gap: 32px 10px;
     justify-content: space-between;
 }
 
@@ -522,9 +522,8 @@
 
 .servicesPrice {
     display: flex;
-    max-width: 444px;
+    min-width: 444px;
     justify-content: space-between;
-    flex: 50%;
 
     &__services {
         h5 {
@@ -553,7 +552,7 @@
 /*************END section price************/
 
 /*************section masters************/
-.section__master {
+.section__masters {
     margin-bottom: 100px;
     padding: 80px 0;
     background-color: #F8F6F7;
@@ -567,6 +566,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px 30px;
+    justify-content: center;
 }
 
 .masters {
@@ -728,6 +728,8 @@
 }
 
 /*************END section work************/
+
+/*************section contacts************/
 .section__contacts {
     position: relative;
     padding: 78px 0 133px 0;
@@ -754,7 +756,7 @@
         font-size: 16px;
         line-height: 14px;
     }
-    
+
     .section__mailLink {
         display: block;
         margin-bottom: 32px;
@@ -771,10 +773,15 @@
     }
 }
 
+.section__form {
+    display: none;
+}
+
 .form {
     position: absolute;
-    bottom: 39.8px;
-    right: 260px;
+    right: 18%;
+    bottom: 50%;
+    transform: translate(0, 50%);
     max-width: 375px;
     max-height: 326px;
     padding: 40px;
@@ -796,26 +803,25 @@
     }
 
     &__input {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 16px;
 
+        input {
+            display: block;
+            height: 44px;
+            border: 1px solid #D8D8D8;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
 
-            input {
-                display: block;
-                height: 44px;
-                border: 1px solid #D8D8D8;
-                border-radius: 4px;
-                box-sizing: border-box;
-            }
-
-            &__field::placeholder {
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 14px;
-                color: #A0A0A0;
-            }      
+        &__field::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            color: #A0A0A0;
+        }
     }
 
     &__titleText2 {
@@ -831,6 +837,9 @@
     }
 
 }
+
+/*************END section contacts************/
+
 
 /*************footer************/
 .footer {

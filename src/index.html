@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./swiper/slick.css">
     <link rel="stylesheet" href="./CSS/styles.css">
     <title>BeautyWorld</title>
 </head>
@@ -588,49 +589,93 @@
                     <div class="section__header work__header">
                         <h2 class="section__title work__title">Наши работы</h2>
                         <div class="section__carouselBtn">
-                            <a href="#">
-                                <div class="carouselBtn">
-                                    <img src="./Images/work/Vector1.png" alt="">
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="carouselBtn">
-                                    <img src="./Images/work/Vector2.png" alt="">
-                                </div>
-                            </a>
+                            <div class="carouselBtn carouselBtn__left">
+                                <img src="./Images/work/Vector1.png" alt="">
+                            </div>
+
+                            <div class="carouselBtn carouselBtn__right">
+                                <img src="./Images/work/Vector2.png" alt="">
+                            </div>
+
                         </div>
                     </div><!--#section__header-->
-                    <div class="section__inner">
+                </div><!--#container-->
+                <div class="section__inner">
+                    <div class="section__carousel">
+                        <!--
                         <div class="section__carousel">
-                            <a class="ourWork" href="#">
-                                <img class="ourWork__foto" src="./Images/work/work1.png" alt="">
-                                <div class="ourWork__btn">
+                            <div class="carousel">
+                                <a class="carousel__link" href="">
+                                    <img class="carousel__img" src="./Images/work/work1.png" alt="">
+                                    <div class="carousel__Btn">
+                                        <img src="./Images/work/search1.png" alt="">
+                                        <p>Увеличить</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel">
+                                <a class="carousel__link" href="">
+                                    <img class="carousel__img" src="./Images/work/work2.png" alt="">
+                                    <div class="carousel__Btn">
+                                        <img src="./Images/work/search1.png" alt="">
+                                        <p>Увеличить</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel">
+                                <a class="carousel__link" href="">
+                                    <img class="carousel__img" src="./Images/work/work3.png" alt="">
+                                    <div class="carousel__Btn">
+                                        <img src="./Images/work/search1.png" alt="">
+                                        <p>Увеличить</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel">
+                                <a class="carousel__link" href="">
+                                    <img class="carousel__img" src="./Images/work/work4.png" alt="">
+                                    <div class="carousel__Btn">
+                                        <img src="./Images/work/search1.png" alt="">
+                                        <p>Увеличить</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>-->
+                        <!-- Slider main container -->
+                        <!-- Slider main container -->
+                        <!-- If we need navigation buttons -->
+                        <div class="slider" style="width: 1440px;">
+                            <div class="slider__item">
+                                <img class="slider__photo" src="./Images/work/work1.png" alt="">
+                                <div class="slider__btn">
                                     <img src="./Images/work/search1.png" alt="">
-                                    <p>Увеличить</p>
+                                    Увеличить
                                 </div>
-                            </a>
-                            <a class="ourWork" href="#">
-                                <img class="ourWork__foto" src="./Images/work/work2.png" alt="">
-                                <div class="ourWork__btn">
+                            </div>
+                            <div class="slider__item">
+                                <img class="slider__photo" src="./Images/work/work2.png" alt="">
+                                <div class="slider__btn">
                                     <img src="./Images/work/search1.png" alt="">
-                                    <p>Увеличить</p>
+                                    Увеличить
                                 </div>
-                            </a>
-                            <a class="ourWork" href="#">
-                                <img class="ourWork__foto" src="./Images/work/work3.png" alt="">
-                                <div class="ourWork__btn">
+                            </div>
+                            <div class="slider__item">
+                                <img class="slider__photo" src="./Images/work/work3.png" alt="">
+                                <div class="slider__btn">
                                     <img src="./Images/work/search1.png" alt="">
-                                    <p>Увеличить</p>
+                                    Увеличить
                                 </div>
-                            </a>
-                            <a class="ourWork" href="#">
-                                <img class="ourWork__foto" src="./Images/work/work4.png" alt="">
-                                <div class="ourWork__btn">
+                            </div>
+                            <div class="slider__item">
+                                <img class="slider__photo" src="./Images/work/work4.png" alt="">
+                                <div class="slider__btn">
                                     <img src="./Images/work/search1.png" alt="">
-                                    <p>Увеличить</p>
+                                    Увеличить
                                 </div>
-                            </a>
+                            </div>
                         </div>
+                    </div><!--#container-->
+                    <div class="container">
                         <div class="section__brands">
                             <p>Бренды, которые мы используем в работе</p>
                             <div class="section__fotoBrands">
@@ -641,8 +686,8 @@
                                 <img src="./Images/work/image5.png" alt="">
                             </div>
                         </div>
-                    </div><!--#section__inner-->
-                </div><!--#container-->
+                    </div><!--#container-->
+                </div><!--#section__inner-->
             </section><!--#work-->
 
             <section id="contacts" class="section section__contacts">
@@ -716,6 +761,10 @@
             </div>
         </footer>
     </div><!--#wrapper-->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./swiper/slick.min.js"></script>
+    <script src="./js/code.js"></script>
 </body>
 
 </html>

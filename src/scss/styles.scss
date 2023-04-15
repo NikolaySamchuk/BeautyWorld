@@ -576,6 +576,7 @@
         position: relative;
 
         img {
+            max-width: 255px;
             transition: 0.5s;
         }
 
@@ -649,7 +650,6 @@
         position: relative;
         width: 40px;
         height: 40px;
-        background-color: #F8F6F7;
         border-radius: 50%;
 
         img {
@@ -659,9 +659,15 @@
             bottom: 50%;
             transform: translate(50%, 50%);
         }
+
+        &:hover {
+            background-color: #F8F6F7;
+        }
     }
 }
 
+
+/*
 .section__carousel {
     margin-bottom: 100px;
 
@@ -699,8 +705,119 @@
             display: block;
         }
     }
+}*/
+
+
+/*
+.container__carousel {
+    max-width: 1440px;
+    height: 371.8px;
 }
 
+.section__carousel {
+    display: flex;
+    height: 371.8px;
+    margin-bottom: 100px;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    width: 25.82%;
+    align-items: center;
+    justify-content: center;
+
+    &__link {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    &__img {
+        width: 91%;
+        border-radius: 8px;
+        transition: 0.25s;
+    }
+
+    &__Btn {
+        position: absolute;
+        display: none;
+        right: 50%;
+        bottom: 50%;
+        transform: translate(50%, 50%);
+        text-align: center;
+
+        p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+
+    &:hover .carousel__img {
+        width: 100%;
+        filter: brightness(50%);
+    }
+
+    &:hover .carousel__Btn {
+        display: block;
+    }
+}
+
+
+
+.section__img2 {
+    width: 23.47%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 95%;
+
+        &:hover {
+            width: 100%;
+        }
+    }
+}
+
+.section__img3 {
+    width: 23.47%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 95%;
+
+        &:hover {
+            width: 100%;
+        }
+    }
+}
+
+.section__img4 {
+    width: 23.47%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 95%;
+
+        &:hover {
+            width: 100%;
+        }
+    }
+}
+
+*/
 .section__brands {
     display: flex;
     flex-direction: column;
@@ -877,4 +994,95 @@
 
 /*************END footer************/
 
+/*************swiper************/
+/* Слайдер */
+
+.slider{
+    width: 1440px;
+    margin: 0 auto 116px auto;
+}
+
+.slick-slider{
+
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+
+/* Ограничивающая оболочка */
+.slick-list {
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+    gap: 29px;
+}
+/* Слайд */
+.slick-slide{
+    width: 338px;
+    height: 338px;
+    position: relative;
+    img {
+        max-width: 338px;
+        max-height: 338px;
+        transition: 0.5s;
+    }
+    &:hover .slider__photo {
+        transform: scale(1.1);
+        filter: brightness(50%);
+    }
+
+    &:hover .slider__btn {
+        opacity: 1;
+    }
+}
+
+
+.slider__btn {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    transition: 0.5s;
+    img {
+        
+        margin-bottom: 8px;
+        max-width: 48px;
+        max-height: 48px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Точки (булиты) */
+.slick-dots{
+    display: none;
+}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+/*************media************/
 @import 'media';

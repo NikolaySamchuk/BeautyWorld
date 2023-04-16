@@ -19,13 +19,6 @@ function buildHtml() {
         .pipe(browserSync.stream());
 }
 
-// Таск работы с js файлами
-function buildJs() {
-    return src('src/js/**/*.js')
-        .pipe(dest('dist/js'))
-        .pipe(browserSync.stream());
-}
-
 // Таск копирования статичных файлов
 function copy() {
     return src(['src/Images/**/*.*']).pipe(dest('dist'));
@@ -40,7 +33,6 @@ function cleanDist() {
 function serve() {
     watch('src/scss/**/*.scss', buildSass);
     watch('src/**/*.html', buildHtml);
-    watch('src/js/**/*.js', buildJs);
 }
 
 // Создание дев-сервера

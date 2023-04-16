@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./swiper/slick.css">
+    <link rel="stylesheet" href="./fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="./CSS/styles.css">
     <title>BeautyWorld</title>
 </head>
@@ -22,19 +22,19 @@
                             <span></span>
                             <span></span>
                             <ul class="hamburger__menu">
-                                <a href="#">
+                                <a href="#price" class="scroll">
                                     <li>Услуги и цены</li>
                                 </a>
-                                <a href="#">
+                                <a href="#masters" class="scroll">
                                     <li>Мастера</li>
                                 </a>
-                                <a href="#">
+                                <a href="#work" class="scroll">
                                     <li>Наши работы</li>
                                 </a>
-                                <a href="#">
+                                <a href="#about" class="scroll">
                                     <li>О нас</li>
                                 </a>
-                                <a href="#">
+                                <a href="#contacts" class="scroll">
                                     <li>Контакты</li>
                                 </a>
                             </ul>
@@ -46,19 +46,19 @@
                     <nav class="navigation header__navigation">
                         <ul class="navigation__markList">
                             <li class="navigation__item">
-                                <a class="navigation__link navigation__link--font" href="#">Услуги и цены</a>
+                                <a class="navigation__link navigation__link--font scroll" href="#price">Услуги и цены</a>
                             </li>
                             <li class="navigation__item">
-                                <a class="navigation__link navigation__link--font" href="#">Мастера</a>
+                                <a class="navigation__link navigation__link--font scroll" href="#masters">Мастера</a>
                             </li>
                             <li class="navigation__item">
-                                <a class="navigation__link navigation__link--font" href="#">Наши работы</a>
+                                <a class="navigation__link navigation__link--font scroll" href="#work">Наши работы</a>
                             </li>
                             <li class="navigation__item">
-                                <a class="navigation__link navigation__link--font" href="#">О нас</a>
+                                <a class="navigation__link navigation__link--font scroll" href="#about">О нас</a>
                             </li>
                             <li class="navigation__item">
-                                <a class="navigation__link navigation__link--font" href="#">Контакты</a>
+                                <a class="navigation__link navigation__link--font scroll" href="#contacts">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -203,28 +203,28 @@
                         <nav class="navigation section__navigationPrice">
                             <ul class="navigation__markList">
                                 <li class="navigation__item">
-                                    <a class="navigation__link navigation__link--font" href="#">Стрижка и
+                                    <a class="navigation__link navigation__link--font price">Стрижка и
                                         укладка</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a class="navigation__link navigation__link--font" href="#">Косметология</a>
+                                    <a class="navigation__link navigation__link--font price">Косметология</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a class="navigation__link navigation__link--font" href="#">Маникюр и
+                                    <a class="navigation__link navigation__link--font price">Маникюр и
                                         педикюр</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a class="navigation__link navigation__link--font" href="#">Макияж</a>
+                                    <a class="navigation__link navigation__link--font price">Макияж</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a class="navigation__link navigation__link--font" href="#">Брови и ресницы</a>
+                                    <a class="navigation__link navigation__link--font price">Брови и ресницы</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a class="navigation__link navigation__link--font" href="#">Массаж</a>
+                                    <a class="navigation__link navigation__link--font price">Массаж</a>
                                 </li>
                             </ul>
                         </nav>
-                        <div class="section__hair-cutting">
+                        <div class="section__hair-cutting price">
                             <div class="servicesPrice">
                                 <div class="servicesPrice__services">
                                     <h5>Женская стрижка</h5>
@@ -282,7 +282,7 @@
                                 <div class="servicesPrice__price">3000 ₽</div>
                             </div>
                         </div>
-                        <div class="section__cosmetology">
+                        <div class="section__cosmetology price">
                             <div class="servicesPrice">
                                 <div class="servicesPrice__services">
                                     <h5>Косметология</h5>
@@ -326,7 +326,7 @@
                                 <div class="servicesPrice__price">1200 ₽</div>
                             </div>
                         </div>
-                        <div class="section__manicure">
+                        <div class="section__manicure price">
                             <div class="servicesPrice">
                                 <div class="servicesPrice__services">
                                     <h5>Маникюр и педикюр</h5>
@@ -384,7 +384,7 @@
                                 <div class="servicesPrice__price">3000 ₽</div>
                             </div>
                         </div>
-                        <div class="section__makeup">
+                        <div class="section__makeup price">
                             <div class="servicesPrice">
                                 <div class="servicesPrice__services">
                                     <h5>Макияж</h5>
@@ -428,7 +428,7 @@
                                 <div class="servicesPrice__price">1200 ₽</div>
                             </div>
                         </div>
-                        <div class="section__eyebrows">
+                        <div class="section__eyebrows price">
                             <div class="servicesPrice">
                                 <div class="servicesPrice__services">
                                     <h5>Брови и ресницы</h5>
@@ -486,7 +486,7 @@
                                 <div class="servicesPrice__price">3000 ₽</div>
                             </div>
                         </div>
-                        <div class="section__massage">
+                        <div class="section__massage price">
                             <div class="servicesPrice">
                                 <div class="servicesPrice__services">
                                     <h5>Массаж</h5>
@@ -602,76 +602,42 @@
                 </div><!--#container-->
                 <div class="section__inner">
                     <div class="section__carousel">
-                        <!--
-                        <div class="section__carousel">
-                            <div class="carousel">
-                                <a class="carousel__link" href="">
-                                    <img class="carousel__img" src="./Images/work/work1.png" alt="">
-                                    <div class="carousel__Btn">
-                                        <img src="./Images/work/search1.png" alt="">
-                                        <p>Увеличить</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="carousel">
-                                <a class="carousel__link" href="">
-                                    <img class="carousel__img" src="./Images/work/work2.png" alt="">
-                                    <div class="carousel__Btn">
-                                        <img src="./Images/work/search1.png" alt="">
-                                        <p>Увеличить</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="carousel">
-                                <a class="carousel__link" href="">
-                                    <img class="carousel__img" src="./Images/work/work3.png" alt="">
-                                    <div class="carousel__Btn">
-                                        <img src="./Images/work/search1.png" alt="">
-                                        <p>Увеличить</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="carousel">
-                                <a class="carousel__link" href="">
-                                    <img class="carousel__img" src="./Images/work/work4.png" alt="">
-                                    <div class="carousel__Btn">
-                                        <img src="./Images/work/search1.png" alt="">
-                                        <p>Увеличить</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>-->
-                        <!-- Slider main container -->
-                        <!-- Slider main container -->
-                        <!-- If we need navigation buttons -->
                         <div class="slider" style="width: 1440px;">
                             <div class="slider__item">
                                 <img class="slider__photo" src="./Images/work/work1.png" alt="">
-                                <div class="slider__btn">
-                                    <img src="./Images/work/search1.png" alt="">
-                                    Увеличить
-                                </div>
+                                <a href="./Images/work/work1.png" data-fancybox="gallery">
+                                    <div class="slider__btn">
+                                        <img src="./Images/work/search1.png" alt="">
+                                        Увеличить
+                                    </div>
+                                </a>
                             </div>
                             <div class="slider__item">
                                 <img class="slider__photo" src="./Images/work/work2.png" alt="">
-                                <div class="slider__btn">
-                                    <img src="./Images/work/search1.png" alt="">
-                                    Увеличить
-                                </div>
+                                <a href="./Images/work/work2.png" data-fancybox="gallery">
+                                    <div class="slider__btn">
+                                        <img src="./Images/work/search1.png" alt="">
+                                        Увеличить
+                                    </div>
+                                </a>
                             </div>
                             <div class="slider__item">
                                 <img class="slider__photo" src="./Images/work/work3.png" alt="">
-                                <div class="slider__btn">
-                                    <img src="./Images/work/search1.png" alt="">
-                                    Увеличить
-                                </div>
+                                <a href="./Images/work/work3.png" data-fancybox="gallery">
+                                    <div class="slider__btn">
+                                        <img src="./Images/work/search1.png" alt="">
+                                        Увеличить
+                                    </div>
+                                </a>
                             </div>
                             <div class="slider__item">
                                 <img class="slider__photo" src="./Images/work/work4.png" alt="">
-                                <div class="slider__btn">
-                                    <img src="./Images/work/search1.png" alt="">
-                                    Увеличить
-                                </div>
+                                <a href="./Images/work/work4.png" data-fancybox="gallery">
+                                    <div class="slider__btn">
+                                        <img src="./Images/work/search1.png" alt="">
+                                        Увеличить
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div><!--#container-->
@@ -744,16 +710,16 @@
                     <nav class="navigation footer__navigation">
                         <ul class="navigation__markList">
                             <li class="navigation__item">
-                                <a class="navigation__link" href="#">Услуги и цены</a>
+                                <a class="navigation__link scroll" href="#price">Услуги и цены</a>
                             </li>
                             <li class="navigation__item">
-                                <a class="navigation__link" href="#">Мастера</a>
+                                <a class="navigation__link scroll" href="#masters">Мастера</a>
                             </li>
                             <li class="navigation__item">
-                                <a class="navigation__link" href="#">Наши работы</a>
+                                <a class="navigation__link scroll" href="#work">Наши работы</a>
                             </li>
                             <li class="navigation__item">
-                                <a class="navigation__link" href="#">Контакты</a>
+                                <a class="navigation__link scroll" href="#contacts">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -763,7 +729,8 @@
     </div><!--#wrapper-->
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="./swiper/slick.min.js"></script>
+    <script src="./slick/slick.min.js"></script>
+    <script src="./fancybox/jquery.fancybox.min.js"></script>
     <script src="./js/code.js"></script>
 </body>
 

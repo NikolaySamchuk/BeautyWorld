@@ -5,8 +5,8 @@ $(document).ready(function () {
         slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 0,
-        prevArrow: ".carouselBtn__right",
-        nextArrow: ".carouselBtn__left",
+        prevArrow: ".carousel-btn__right",
+        nextArrow: ".carousel-btn__left",
         variableWidth: true,
     });
 });
@@ -18,22 +18,22 @@ $('[data-fancybox="gallery"]').fancybox({
 
 
 /************табы в секции "Услуги и цены"************/
-const list = document.querySelectorAll('a.price');
-const box = Array.from(list);
+const tabPriceArray = Array.from(document.querySelectorAll('a.price')); //массив ссылок на услуги
+const priceArray = Array.from(document.querySelectorAll('div.price')); //массив услуг
 
-const list1 = document.querySelectorAll('div.price');
-const box1 = Array.from(list1);
+tabPriceArray[0].style = 'text-decoration: underline; color: #00BF78'; //отображение на старте
+priceArray[0].style = 'display: flex';
 
-box.forEach(function (num, i) {
-    num.addEventListener("click", function () {
-        for (let j = 0; j < 6; j++) {
+tabPriceArray.forEach(function (num, i) { //пробегаем по массиву ссылок
+    num.addEventListener("click", function () { //если click
+        for (let j = 0; j < tabPriceArray.length; j++) {
             if (i === j) {
-                box1[j].style = 'display: flex';
-                box[j].style = 'text-decoration: underline; color: #00BF78';
+                tabPriceArray[j].style = 'text-decoration: underline; color: #00BF78';
+                priceArray[j].style = 'display: flex'; //отображение услуг
             }
-            else {
-                box1[j].style = 'display: none';
-                box[j].style = 'text-decoration: none; color: #333333';
+            else { 
+                tabPriceArray[j].style = 'text-decoration: none; color: #333333';
+                priceArray[j].style = 'display: none'; //скрытие услуг
             }
         }
     });
@@ -42,17 +42,29 @@ box.forEach(function (num, i) {
 
 /************плавный скролл"************/
 document.querySelectorAll('a.scroll').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const getHref = this.getAttribute('href').substring(1)
-        const scrollTarget = document.getElementById(getHref)
-        const topOffset = 100
-        const elementTop = scrollTarget.getBoundingClientRect().top
-        const offsetPosition = elementTop - topOffset
-        window.scrollBy({
+    link.addEventListener('click', function (smoothScroll) {
+        smoothScroll.preventDefault(); 
+        const getHref = this.getAttribute('href').substring(1); //получаем ссылку без #
+        const scrollTarget = document.getElementById(getHref); //элемент по ссылке
+        const topOffset = 100; //задаем смещение
+        const elementTop = scrollTarget.getBoundingClientRect().top; //верхняя граница выбранного элемента
+        const offsetPosition = elementTop - topOffset; //смещение
+        window.scrollBy({ //делаем скролл
             top: offsetPosition,
             behavior: 'smooth',
-        })
-    })
-})
+        });
+    });
+});
 
+/************данные с формы"************/
+const contactsForm = document.getElementsByClassName('form');
+
+contactsForm[0].addEventListener('submit', function (event) {
+    event.preventDefault();
+    const {name, phone} = this.elements;
+    console.log({
+        name: name.value,
+        phone: phone.value
+    });
+    this.reset();
+});

@@ -457,67 +457,52 @@
 .section__navigationPrice {
     max-width: 794px;
     margin-bottom: 47px;
+    a:hover {
+        cursor: pointer;
+    }
 }
 
+
 .section__hair-cutting {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     gap: 32px 10px;
     justify-content: space-between;
 }
 
 .section__cosmetology {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
-    gap: 32px 0;
+    gap: 32px 10px;
     justify-content: space-between;
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
 }
 
 .section__manicure {
-    opacity: 0;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
-    gap: 32px 0;
+    gap: 32px 10px;
     justify-content: space-between;
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
 }
 
 .section__makeup {
-    opacity: 0;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
-    gap: 32px 0;
+    gap: 32px 10px;
     justify-content: space-between;
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
 }
 
 .section__eyebrows {
-    opacity: 0;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
-    gap: 32px 0;
+    gap: 32px 10px;
     justify-content: space-between;
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
 }
 
 .section__massage {
-    opacity: 0;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
-    gap: 32px 0;
+    gap: 32px 10px;
     justify-content: space-between;
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
 }
 
 .servicesPrice {
@@ -658,45 +643,6 @@
             right: 50%;
             bottom: 50%;
             transform: translate(50%, 50%);
-        }
-    }
-}
-
-.section__carousel {
-    margin-bottom: 100px;
-
-    .ourWork {
-        text-decoration: none;
-        position: relative;
-
-        &__foto {
-            max-width: 255px;
-            height: auto;
-        }
-
-        &__btn {
-            display: none;
-            position: absolute;
-            right: 50%;
-            bottom: 100px;
-            transform: translate(50%);
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 17px;
-            text-align: center;
-            color: #FFFFFF;
-
-            img {
-                margin-bottom: 8px;
-            }
-
-            p {
-                margin: 0;
-            }
-        }
-
-        &:hover .ourWork__btn {
-            display: block;
         }
     }
 }
@@ -876,5 +822,6 @@
 }
 
 /*************END footer************/
-
+/*************импорт файлов************/
+@import 'slick_stile';
 @import 'media';

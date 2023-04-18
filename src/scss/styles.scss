@@ -51,7 +51,7 @@
     display: block;
     max-width: 495px;
 
-    &__markList {
+    &__mark-list {
         display: flex;
         flex-wrap: wrap;
         gap: 5px 28px;
@@ -78,7 +78,7 @@
     }
 }
 
-.socialNetwork {
+.social-network {
     display: inline-flex;
     gap: 16px;
 
@@ -187,7 +187,6 @@
         }
     }
 
-
     &__menu {
         position: absolute;
         width: 150px;
@@ -243,7 +242,7 @@
         text-align: right;
     }
 
-    &__phoneLink {
+    &__phone-link {
         font-weight: 500;
         font-size: 18px;
         line-height: 14px;
@@ -286,7 +285,7 @@
         border-radius: 24px;
     }
 
-    &__imgGirl {
+    &__img-girl {
         position: absolute;
         bottom: 0;
         right: 93px;
@@ -321,35 +320,76 @@
 /*************END section HEADER************/
 
 /*************section about************/
-.section__description {
-    position: relative;
-    margin-bottom: 127px;
-}
+.section {
+    &__description {
+        position: relative;
+        margin-bottom: 127px;
+    }
 
-.section__text1 {
-    max-width: 569px;
-    margin: 0 0 16px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 32px;
-}
+    &__about-salon {
+        max-width: 569px;
+        margin: 0 0 16px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+    }
 
-.section__text2 {
-    max-width: 569px;
-    margin: 0;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-}
+    &__about-beauty {
+        max-width: 569px;
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+    }
 
-.section__advantage {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-    gap: 30px;
+    &__advantage {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        gap: 30px;
+    }
+
+    &__video {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        img {
+            display: block;
+            position: relative;
+            max-width: 445px;
+            height: auto;
+            border-radius: 8px;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        max-width: 185px;
+        max-height: 92px;
+        right: 50%;
+        bottom: 50%;
+        transform: translate(50%, 50%);
+    }
+
+    &__video-link {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        color: #FFFFFF;
+
+        img {
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            max-width: 60px;
+            height: auto;
+        }
+    }
 }
 
 .infoBlock {
@@ -380,56 +420,21 @@
     }
 }
 
-.section__video {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
-    img {
-        display: block;
-        position: relative;
-        max-width: 445px;
-        height: auto;
-        border-radius: 8px;
-    }
-}
-
-.section__btn {
-    position: absolute;
-    max-width: 185px;
-    max-height: 92px;
-    right: 50%;
-    bottom: 50%;
-    transform: translate(50%, 50%);
-}
-
-.section__videoLink {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    color: #FFFFFF;
-
-    img {
-        display: block;
-        position: relative;
-        margin: 0 auto;
-        max-width: 60px;
-        height: auto;
-    }
-}
-
 /*************END section about************/
 
 /*************section services************/
-.section__services {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 48px 30px;
+.section {
+    &__services {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px 30px;
+    }
 }
 
 .services {
     max-width: 350px;
+    display: flex;
+    flex-direction: column;
 
     img {
         margin-bottom: 20px;
@@ -449,63 +454,70 @@
         font-size: 12px;
         line-height: 20px;
     }
+
+    .btn {
+        align-self: flex-start;
+        margin-top: auto;
+ }
 }
 
 /*************END section services************/
 
 /*************section price************/
-.section__navigationPrice {
-    max-width: 794px;
-    margin-bottom: 47px;
-    a:hover {
-        cursor: pointer;
+.section {
+    &__navigation-price {
+        max-width: 794px;
+        margin-bottom: 47px;
+
+        a:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__hair-cutting {
+        display: none;
+        flex-wrap: wrap;
+        gap: 32px 10px;
+        justify-content: space-between;
+    }
+
+    &__cosmetology {
+        display: none;
+        flex-wrap: wrap;
+        gap: 32px 10px;
+        justify-content: space-between;
+    }
+
+    &__manicure {
+        display: none;
+        flex-wrap: wrap;
+        gap: 32px 10px;
+        justify-content: space-between;
+    }
+
+    &__makeup {
+        display: none;
+        flex-wrap: wrap;
+        gap: 32px 10px;
+        justify-content: space-between;
+    }
+
+    &__eyebrows {
+        display: none;
+        flex-wrap: wrap;
+        gap: 32px 10px;
+        justify-content: space-between;
+    }
+
+    &__massage {
+        display: none;
+        flex-wrap: wrap;
+        gap: 32px 10px;
+        justify-content: space-between;
     }
 }
 
-
-.section__hair-cutting {
-    display: none;
-    flex-wrap: wrap;
-    gap: 32px 10px;
-    justify-content: space-between;
-}
-
-.section__cosmetology {
-    display: none;
-    flex-wrap: wrap;
-    gap: 32px 10px;
-    justify-content: space-between;
-}
-
-.section__manicure {
-    display: none;
-    flex-wrap: wrap;
-    gap: 32px 10px;
-    justify-content: space-between;
-}
-
-.section__makeup {
-    display: none;
-    flex-wrap: wrap;
-    gap: 32px 10px;
-    justify-content: space-between;
-}
-
-.section__eyebrows {
-    display: none;
-    flex-wrap: wrap;
-    gap: 32px 10px;
-    justify-content: space-between;
-}
-
-.section__massage {
-    display: none;
-    flex-wrap: wrap;
-    gap: 32px 10px;
-    justify-content: space-between;
-}
-
-.servicesPrice {
+.services-price {
     display: flex;
     min-width: 444px;
     justify-content: space-between;
@@ -537,21 +549,23 @@
 /*************END section price************/
 
 /*************section masters************/
-.section__masters {
-    margin-bottom: 100px;
-    padding: 80px 0;
-    background-color: #F8F6F7;
+.section {
+    &__masters {
+        margin-bottom: 100px;
+        padding: 80px 0;
+        background-color: #F8F6F7;
 
-    .section__inner {
-        margin: 0;
+        .section__inner {
+            margin: 0;
+        }
     }
-}
 
-.section__aboutMasters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px 30px;
-    justify-content: center;
+    &__about-masters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px 30px;
+        justify-content: center;
+    }
 }
 
 .masters {
@@ -561,6 +575,7 @@
         position: relative;
 
         img {
+            max-width: 255px;
             transition: 0.5s;
         }
 
@@ -612,54 +627,52 @@
 /*************END section masters************/
 
 /*************section work************/
-.work__header {
-    position: relative;
-}
+.section {
+    &__carousel-btn {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
 
-.work__title {
-    margin-bottom: 52px;
-}
+        a:not(:last-child) {
+            margin-right: 16px;
+        }
 
-.section__carouselBtn {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+        .carousel-btn {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
 
-    a:not(:last-child) {
-        margin-right: 16px;
-    }
+            img {
+                display: block;
+                position: absolute;
+                right: 50%;
+                bottom: 50%;
+                transform: translate(50%, 50%);
+            }
 
-    .carouselBtn {
-        position: relative;
-        width: 40px;
-        height: 40px;
-        background-color: #F8F6F7;
-        border-radius: 50%;
-
-        img {
-            display: block;
-            position: absolute;
-            right: 50%;
-            bottom: 50%;
-            transform: translate(50%, 50%);
+            &:hover {
+                background-color: #F8F6F7;
+            }
         }
     }
-}
 
-.section__brands {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    &__brands {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    p {
-        margin: 0 0 40px 0;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
+        p {
+            margin: 0 0 40px 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
     }
 
-    .section__fotoBrands {
+    &__foto-brands {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -673,29 +686,46 @@
     }
 }
 
+.work__header {
+    position: relative;
+}
+
+.work__title {
+    margin-bottom: 52px;
+}
+
 /*************END section work************/
 
 /*************section contacts************/
-.section__contacts {
-    position: relative;
-    padding: 78px 0 133px 0;
-    background-color: #F8F6F7;
-
-    .section__inner {
-        margin: 0;
+.section {
+    &__header {
+        margin-top: 36px;
     }
-}
 
-.section__ollContacts {
+    &__contacts {
+        padding: 40px 0 40px 0;
+        background-color: #F8F6F7;
+    
+        .section__inner {
+            margin: 0;
+        }
 
-    .section__addr {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1015px;
+            justify-content: space-between;
+        }
+    }
+
+    &__addr {
         margin: 0 0 20px 0;
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
     }
 
-    .section__phoneLink {
+    &__phone-link {
         display: block;
         margin-bottom: 20px;
         font-weight: 400;
@@ -703,7 +733,7 @@
         line-height: 14px;
     }
 
-    .section__mailLink {
+    &__mail-link {
         display: block;
         margin-bottom: 32px;
         font-weight: 400;
@@ -711,7 +741,7 @@
         line-height: 20px;
     }
 
-    .section__social {
+    &__social {
         margin: 0 0 12px 0;
         font-weight: 400;
         font-size: 12px;
@@ -719,15 +749,9 @@
     }
 }
 
-.section__form {
-    display: none;
-}
+
 
 .form {
-    position: absolute;
-    right: 18%;
-    bottom: 50%;
-    transform: translate(0, 50%);
     max-width: 375px;
     max-height: 326px;
     padding: 40px;
@@ -741,7 +765,7 @@
         line-height: 14px;
     }
 
-    &__titleText1 {
+    &__manager {
         margin: 0 0 35px 0;
         font-weight: 400;
         font-size: 14px;
@@ -770,7 +794,7 @@
         }
     }
 
-    &__titleText2 {
+    &__approval {
         margin: 0;
         font-weight: 300;
         font-size: 12px;
@@ -780,8 +804,14 @@
     &__Btn {
         padding: 17px 30px;
         border-radius: 24px;
+        border: none;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+        background-color: #FB9475;
+        text-align: center;
     }
-
 }
 
 /*************END section contacts************/

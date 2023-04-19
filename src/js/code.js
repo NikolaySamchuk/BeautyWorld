@@ -16,7 +16,6 @@ $('[data-fancybox="gallery"]').fancybox({
     'width': '600px',
 });
 
-
 /************табы в секции "Услуги и цены"************/
 const tabPriceArray = Array.from(document.querySelectorAll('a.price')); //массив ссылок на услуги
 const priceArray = Array.from(document.querySelectorAll('div.price')); //массив услуг

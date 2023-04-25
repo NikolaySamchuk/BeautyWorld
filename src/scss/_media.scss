@@ -14,16 +14,16 @@
             margin: 0 15px 0 15px;
         }
 
-        &__imgGirl img {
+        &__img-girl img {
             opacity: 0.5;
             transform: scale(1.6, 1.6);
         }
 
-        &__imgGirl:before {
+        &__img-girl:before {
             display: none;
         }
 
-        &__phoneLink {
+        &__phone-link {
             font-size: 14px;
         }
 
@@ -53,11 +53,11 @@
             justify-content: center;
         }
 
-        &__text1 {
+        &__about-salon {
             max-width: 100%;
         }
 
-        &__text2 {
+        &__about-beauty {
             max-width: 45%;
         }
 
@@ -86,7 +86,7 @@
             margin-bottom: 50px;
         }
 
-        &__aboutMasters {
+        &__about-masters {
             margin: 0 15px 0px 15px;
         }
     }
@@ -100,22 +100,21 @@
 
     //секция contacts
     .section {
-        &__ollContacts {
-            margin: 0 15px 0px 15px;
+        &__contacts {
+            text-align: center;
+
+            .container {
+                margin: 0 15px 0px 15px;
+            }
         }
     }
 
-    .servicesPrice {
+    .services-price {
         min-width: 320px;
 
         &__services {
             max-width: 230px;
         }
-    }
-
-    //стиль для формы
-    .form {
-        transform: translate(27%, 50%);
     }
 
     //секция footer
@@ -139,7 +138,7 @@
 
         }
 
-        &__navigation .navigation__markList {
+        &__navigation .navigation__mark-list {
             justify-content: center;
         }
 
@@ -157,7 +156,7 @@
             margin-bottom: 60px;
         }
 
-        &__imgGirl {
+        &__img-girl {
             display: none;
         }
 
@@ -194,13 +193,13 @@
 
     //секция about
     .section {
-        &__text1 {
+        &__about-salon {
             max-width: 100%;
             text-align: justify;
             font-size: 18px;
         }
 
-        &__text2 {
+        &__about-beauty {
             max-width: 100%;
             text-align: justify;
             font-size: 14px;
@@ -219,18 +218,18 @@
     }
 
     .section {
-        &__navigationPrice .navigation__markList {
+        &__navigation-price .navigation__mark-list {
             justify-content: center;
         }
     }
 
-    .socialNetwork--vertical {
+    .social-network--vertical {
         flex-direction: row;
     }
 
     //секция work
     .section {
-        &__carouselBtn {
+        &__carousel-btn {
             right: 50%;
             bottom: -35%;
             transform: translate(50%, 50%);
@@ -241,35 +240,26 @@
             text-align: center;
         }
 
-        &__fotoBrands {
+        &__foto-brands {
             transform: scale(0.7, 0.7);
         }
     }
 
     //секция contacts
     .section {
-        &__ollContacts {
-            text-align: center;
-        }
 
         &__contacts {
 
             padding: 45px 0 30px 0;
-        }
 
-        &__form {
-            display: block;
-            min-height: 400px;
+            .container {
+                gap: 10px;
+                justify-content: center;
+            }
         }
 
         .form {
-            right: 50%;
-            bottom: 20px;
-            transform: translate(50%);
-            padding: 25px;
-            max-height: none;
-
-            &__titleText1 {
+            &__manager {
                 margin: 0 0 10px 0;
                 font-size: 12px;
             }
@@ -282,13 +272,13 @@
             max-width: 200px;
         }
 
-        &__navigation .navigation__markList {
+        &__navigation .navigation__mark-list {
             margin: 0;
             justify-content: right;
         }
     }
 
-    .servicesPrice {
+    .services-price {
         display: flex;
         min-width: 200px;
 
@@ -331,7 +321,7 @@
     }
 
     //секция services
-    .servicesPrice {
+    .services-price {
         &__services {
             h5 {
                 font-size: 16px;
@@ -377,7 +367,7 @@
 
     //секция work
     .section {
-        .section__carouselBtn {
+        .section__carousel-btn {
             bottom: -90%;
         }
     }
@@ -401,7 +391,7 @@
             max-width: 150px;
         }
 
-        &__navigation .navigation__markList {
+        &__navigation .navigation__mark-list {
             gap: 5px 5px;
         }
 

@@ -2,6 +2,9 @@ const { src, dest, series, parallel, watch} = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const clean = require('gulp-clean');
 const browserSync = require('browser-sync').create();
+const webpackStream = require('webpack-stream');
+const rename = require('gulp-rename');
+
 // Таск компиляции SASS в CSS
 function buildSass() {
     return src('src/scss/**/*.scss')
@@ -17,12 +20,21 @@ function buildHtml() {
         .pipe(browserSync.stream());
 }
 
-// Таск работы с js файлами
 function buildJs() {
-    return src('src/js/**/*.js')
-        .pipe(dest('dist/js'))
-        .pipe(browserSync.stream());
-}
+    return src('src/js/index.js')
+      .pipe(webpackStream(require('./webpack.config')))
+      .pipe(rename('main.min.js'))
+      .pipe(dest('src/js'))
+      .pipe(dest('dist/js'))
+      .pipe(browserSync.stream());
+  }
+
+// Таск работы с js файлами
+//function buildJs() {
+//    return src('src/js/**/*.js')
+//       .pipe(dest('dist/js'))
+//        .pipe(browserSync.stream());
+//}
 
 // Таск копирования статичных файлов
 function copy() {
@@ -36,7 +48,7 @@ function cleanDist() {
 function serve() {
     watch('src/scss/**/*.scss', buildSass);
     watch('src/**/*.html', buildHtml);
-    watch('src/js/**/*.js', buildJs);
+    watch(['src/js/**/*.js', '!src/js/**/*.min.js'], buildJs);
 }
 
 // Создание дев-сервера
@@ -46,5 +58,5 @@ function createDevServer() {
         notify: false
     })
 }
-exports.build = series(cleanDist, parallel([buildSass, buildHtml, copy]));
-exports.default = series(buildSass, parallel(createDevServer, serve));
+exports.build = series(cleanDist, parallel([buildSass, buildHtml, buildJs, copy]));
+exports.default = series(buildSass, buildJs, parallel(createDevServer, serve));

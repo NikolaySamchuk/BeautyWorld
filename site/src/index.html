@@ -11,6 +11,37 @@
 </head>
 
 <body>
+    <form class="extended-form" id="hidden">
+        <div class="extended-form__box">
+            <p>Заполните форму</p>
+            <label for="name">Ваше имя (обязательное поле)</label>
+            <input class="extended-form__field" type="text" id="name" name="name" placeholder="Имя" required>
+            <label for="phone">Номер телефона (обязательное поле)</label>
+            <input class="extended-form__field" data-mask="phone" type="tel" id="phone" name="phone"
+                placeholder="+7 (___) ___-__-__" required>
+            <label for="master-select">Выберите мастера</label>
+            <select class="extended-form__field" id="master-select" name="masterId">
+                <option value="">Не выбран</option>
+            </select>
+            <label for="service-select">Выберите услугу</label>
+            <select class="extended-form__field" id="service-select" name="serviceId">
+                <option value="">Не выбрана</option>
+            </select>
+            <label for="data-select">Выберите дату</label>
+            <input class="extended-form__field" type="date" id="date" name="visitDate">
+            <button class="extended-form__Btn">Записаться</button>
+            <div class="extended-form__status">
+                <div class="extended-form__status-load">
+                    <img src="./Images/Preloader_1.gif" alt="">
+                    <p>Отправка заявки!</p>
+                </div>
+                <div class="extended-form__status-ok">
+                    <p>Ваша заявка отправлена! В ближайшее время с вами свяжется менеджер.</p>
+                </div>
+            </div>
+        </div>
+    </form>
+
     <div class="wrapper">
 
         <header class="header">
@@ -72,7 +103,7 @@
                 <div class="header__inner">
                     <div class="header__title">Создай свой образ вместе с нами</div>
                     <div class="header__text">Идеальный образ за 60 минут</div>
-                    <a class="btn header__btn" href="#">Записаться онлайн</a>
+                    <a class="btn header__btn update-form" data-fancybox href="#hidden">Записаться онлайн</a>
                 </div><!--#header__inner-->
                 <div class="header__img-girl">
                     <img src="./Images/Header/girl.png" alt="">
@@ -163,26 +194,26 @@
                                 <img src="./Images/Services/services.jpg" alt="">
                                 <h4>Маникюр</h4>
                                 <p>Аппаратный, комбинированный или классический.</p>
-                                <a class="btn" href="#">Записаться</a>
+                                <a class="btn update-form" data-fancybox href="#hidden">Записаться</a>
                             </div>
                             <div class="services">
                                 <img src="./Images/Services/services.jpg" alt="">
                                 <h4>Покрытие гель-лак</h4>
                                 <p>Гель-лак наносится в несколько слоев с использованием базы и топа. Каждый слой
                                     полимеризуется в LED-лампе.</p>
-                                <a class="btn" href="#">Записаться</a>
+                                <a class="btn update-form" data-fancybox href="#hidden">Записаться</a>
                             </div>
                             <div class="services">
                                 <img src="./Images/Services/services.jpg" alt="">
                                 <h4>Бразильский маникюр</h4>
                                 <p>Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.</p>
-                                <a class="btn" href="#">Записаться</a>
+                                <a class="btn update-form" data-fancybox href="#hidden">Записаться</a>
                             </div>
                             <div class="services">
                                 <img src="./Images/Services/services.jpg" alt="">
                                 <h4>Педикюр</h4>
                                 <p>Аппаратный, комбинированный или классический.</p>
-                                <a class="btn" href="#">Записаться</a>
+                                <a class="btn update-form" data-fancybox href="#hidden">Записаться</a>
                             </div>
                             <div class="services">
                                 <img src="./Images/Services/services.jpg" alt="">
@@ -191,7 +222,7 @@
                                     и
                                     укрепляет суставы.
                                 </p>
-                                <a class="btn" href="#">Записаться</a>
+                                <a class="btn" data-fancybox href="#hidden">Записаться</a>
                             </div>
                         </div>
                     </div><!--#section__inner-->
@@ -547,36 +578,36 @@
                     <div class="section__inner">
                         <div class="section__about-masters">
                             <div class="masters">
-                                <a class="masters__link" href="#">
+                                <a class="masters__link" data-fancybox href="#hidden">
                                     <img class="masters__foto" src="./Images/Masters/girl1.png" alt="">
-                                    <p class="masters__hint">Записаться к мастеру</p>
+                                    <p class="masters__hint update-form">Записаться к мастеру</p>
                                 </a>
                                 <h5>Краснова Ирина</h5>
                                 <p class="masters__specialization">Мастер ногтевого сервиса</p>
                                 <p class="masters__experience">опыт работы 5 лет</p>
                             </div>
                             <div class="masters">
-                                <a class="masters__link" href="#">
+                                <a class="masters__link" data-fancybox href="#hidden">
                                     <img class="masters__foto" src="./Images/Masters/girl2.png" alt="">
-                                    <p class="masters__hint">Записаться к мастеру</p>
+                                    <p class="masters__hint update-form">Записаться к мастеру</p>
                                 </a>
                                 <h5>Калилова Жанна</h5>
                                 <p class="masters__specialization">Визажист-стилист</p>
                                 <p class="masters__experience">опыт работы 5 лет</p>
                             </div>
                             <div class="masters">
-                                <a class="masters__link" href="#">
+                                <a class="masters__link" data-fancybox href="#hidden">
                                     <img class="masters__foto" src="./Images/Masters/girl3.png" alt="">
-                                    <p class="masters__hint">Записаться к мастеру</p>
+                                    <p class="masters__hint update-form">Записаться к мастеру</p>
                                 </a>
                                 <h5>Киселева Алина</h5>
                                 <p class="masters__specialization">Парикмахер</p>
                                 <p class="masters__experience">опыт работы 5 лет</p>
                             </div>
                             <div class="masters">
-                                <a class="masters__link" href="#">
+                                <a class="masters__link" data-fancybox href="#hidden">
                                     <img class="masters__foto" src="./Images/Masters/girl4.png" alt="">
-                                    <p class="masters__hint">Записаться к мастеру</p>
+                                    <p class="masters__hint update-form">Записаться к мастеру</p>
                                 </a>
                                 <h5>Иванова Елена</h5>
                                 <p class="masters__specialization">Мастер ногтевого сервиса</p>
@@ -694,8 +725,8 @@
                         </p>
                         <div class="form__input">
                             <input class="form__field" type="text" name="name" placeholder="Ваше имя" required>
-                            <input class="form__field" type="tel" name="phone" placeholder="+7 (___) ___-__-__"
-                                required>
+                            <input class="form__field" data-mask="phone" type="tel" name="phone"
+                                placeholder="+7 (___) ___-__-__" required>
                             <button class="form__Btn">Записаться</button>
                         </div>
                         <p class="form__approval">Нажимая на кнопку вы соглашаетесь с <a href="#">обработкой
@@ -740,7 +771,8 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./slick/slick.min.js"></script>
     <script src="./fancybox/jquery.fancybox.min.js"></script>
-    <script src="./js/code.js"></script>
+    <script src="./imask/imask.js"></script>
+    <script src="./js/main.min.js"></script>
 
 </body>
 

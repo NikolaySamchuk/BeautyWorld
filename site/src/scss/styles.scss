@@ -208,6 +208,99 @@
 
 }
 
+.extended-form {
+    display: none;
+    max-width: 500px;
+    max-height: 800px;
+    padding: 40px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 350px;
+
+        p {
+            text-align: center;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 14px;
+        }
+
+        label {
+            text-align: left;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 14px;
+        }
+    }
+
+    &__status {
+        display: none;
+        justify-content: center;
+    }
+
+    &__status-load {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+
+        img {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: #fff;
+            height: 60px;
+            width: 60px;
+        }
+
+        p {
+            margin: 0;
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+    &__status-ok {
+        display: none;
+        p {
+            margin: 0;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+
+    &__field {
+        display: block;
+        height: 44px;
+        margin-bottom: 20px;
+        border: 1px solid #D8D8D8;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    &__field:invalid {
+        border: 2px solid red;
+    }
+
+    &__Btn {
+        padding: 17px 30px;
+        border-radius: 24px;
+        border: none;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 14px;
+        color: #FFFFFF;
+        background-color: #FB9475;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
 /*************section HEADER************/
 .header {
     margin-bottom: 100px;
@@ -458,7 +551,7 @@
     .btn {
         align-self: flex-start;
         margin-top: auto;
- }
+    }
 }
 
 /*************END section services************/
@@ -705,7 +798,7 @@
     &__contacts {
         padding: 40px 0 40px 0;
         background-color: #F8F6F7;
-    
+
         .section__inner {
             margin: 0;
         }

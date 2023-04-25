@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: #FB9475;
+  margin-bottom: 50px;
+}
+
+.nav__ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 15px;
+}

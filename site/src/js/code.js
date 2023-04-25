@@ -142,10 +142,11 @@ updateForm.forEach(link => {
         })
             .then((response) => response.json())
             .then((data) => {
-                for (let i = 0; i < data.length; i++) {
+                 for (let i = 0; i < data.length; i++) {
                     let newOption = new Option(data[i].fullName, data[i].id);
                     masterSelectList.append(newOption);
-                }
+                } 
+                //masterSelectList = data.map((el) => new Option(el.fullName, el.id))
             })
     });
 });

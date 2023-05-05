@@ -1,0 +1,66 @@
+.employees {
+    display: flex;
+    gap: 10px;
+}
+
+.employees__cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-height: 400px;
+}
+
+.create-card {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    max-height: 610px;
+    background-color: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    border-radius: 4px;
+}
+
+.create-card__input {
+    display: block;
+    height: 44px;
+    margin-bottom: 20px;
+    border: 1px solid #D8D8D8;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 15px;
+}
+
+.create-card__title {
+    margin: 0;
+}
+
+.create-card__label {
+    text-align: left;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.emp-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 210px;
+    min-height: 405px;
+    padding: 10px;
+    border: 1px solid #D8D8D8;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+}
+
+.emp-card__img {
+    height: 100%;
+    align-self: center;
+}
+
+.emp-card__photo {
+    justify-items: center;
+    max-width: 150px;
+}
+

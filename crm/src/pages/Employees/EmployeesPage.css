@@ -1,5 +1,6 @@
 .employees {
     display: flex;
+    gap: 10px;
 }
 
 .employees__cards {
@@ -12,13 +13,11 @@
 .create-card {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     padding: 40px;
-    margin-right: 30px;
-    max-width: 350px;
-    max-height: 500px;
+    max-height: 610px;
     background-color: #FFFFFF;
-    border-radius: 8px;
+    border: 1px solid #D8D8D8;
+    border-radius: 4px;
 }
 
 .create-card__input {
@@ -37,10 +36,18 @@
     margin: 0;
 }
 
+.create-card__label {
+    text-align: left;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
 .emp-card {
     display: flex;
     flex-direction: column;
-    max-width: 250px;
+    min-width: 210px;
+    min-height: 405px;
     padding: 10px;
     border: 1px solid #D8D8D8;
     border-radius: 4px;

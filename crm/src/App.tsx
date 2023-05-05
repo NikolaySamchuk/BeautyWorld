@@ -1,16 +1,19 @@
-import { useContext, useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 import { Outlet, Link, useLocation, Navigate } from 'react-router-dom';
 import { useAuth } from './contexts/AuthContext';
 import { Button } from 'antd';
 
 function App() {
-  const { isLoggedIn, logout } = useAuth();
-
+  const { isLoggedIn, logout, checkAuth } = useAuth();
   const location = useLocation();
 
+  useEffect(()=>{
+    checkAuth();
+  }, []);
+
   if (!isLoggedIn) {
-    return <Navigate to='/login' />
+    return <Navigate to= "/login" />
   }
 
   return <>
@@ -25,7 +28,7 @@ function App() {
           </li>
         </ul>
         <div>
-          <Button onClick={logout} type="primary" size="large">Выход</Button>
+          <Button href='/login' type="primary" size="large">Выход</Button>
         </div>
       </nav>
     )}

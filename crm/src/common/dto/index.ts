@@ -1,3 +1,6 @@
+export * from './CustomersDto'
+export * from './DefaultDto'
+export * from './OrdersDto'
+export * from './ServicesDto'
 export * from './StaffDto'
-export * from './AuthDataDto'
-export * from './PostStaffDto'
+

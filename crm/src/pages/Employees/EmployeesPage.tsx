@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { StaffDto } from "../../common/dto";
+import { StaffDto, CreateStaffDto } from "../../common/dto";
 import { EmployeesApi } from "../../common/api";
-import { EmployeeCreateForm, EmployeeCreateFormData } from "./components/EmployeeCreateForm";
+import { EmployeeCreateForm } from "./components/EmployeeCreateForm";
 import { EmployeeCard } from "./components/EmployeeCard";
 import './EmployeesPage.css'
 
@@ -14,22 +14,32 @@ export function EmployeesPage() {
   }, []);
 
   const removeEmployee = (employeeId: number) => {
+    EmployeesApi.deleteCard(employeeId);
     setEmployees(employees.filter(x => x.id !== employeeId));
   };
 
-  const createEmployee = (data: EmployeeCreateFormData) => {
+  const createEmployee = (data: CreateStaffDto) => {
+
+    EmployeesApi.create({
+      firstName: data.firstName,
+      patronymic: data.patronymic,
+      surName: data.surName,
+      position: data.position,
+      startWorkDate: data.startWorkDate,
+      photo: data.photo
+    })
+
     setEmployees(employees.concat({
       "id": employees.length + 1,
       "firstName": data.firstName,
       "patronymic": data.patronymic,
       "surName": data.surName,
-      "fullName": data.firstName,
-      "position": data.firstName,
-      "startWorkDate": data.firstName,
-      "photo": data.firstName
+      "fullName": data.firstName +' '+ data.surName +' '+ data.patronymic,
+      "position": data.position,
+      "startWorkDate": data.startWorkDate,
+      "photo": data.photo
     }))
   };
-
 
   return (
     <>
@@ -37,11 +47,7 @@ export function EmployeesPage() {
         <EmployeeCreateForm onCreate={createEmployee} />
         {employees.length === 0 && <p>Нет данных</p>}
         <div ref={employeeListRef} className="employees__cards">
-          {employees.map(employee => <EmployeeCard
-            key={employee.id}
-            employee={employee}
-            onRemove={() => removeEmployee(employee.id)}
-          />)}
+          {employees.map(employee => <EmployeeCard key={employee.id} employee={employee} onRemove={() => removeEmployee(employee.id)}/>)}
         </div>
       </div>
     </>

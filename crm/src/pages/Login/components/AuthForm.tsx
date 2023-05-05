@@ -1,9 +1,9 @@
 import { FormEventHandler, useRef, useState } from "react";
-import { AuthDataDto } from "../../../common/dto";
+import { AuthDto } from "../../../common/dto/DefaultDto";
 import { Button} from 'antd';
 
 interface authFormProps {
-    onLogin: (authData: AuthDataDto) => void;
+    onLogin: (authData: AuthDto) => void;
 }
 
 export function AuthForm(props: authFormProps) {
